@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0d1b25] text-white min-h-screen flex">
+
+  <!-- SIDEBAR -->
+  <aside class="w-64 bg-[#0b1621] h-screen px-6 py-8 flex flex-col">
+    <div class="flex flex-col items-center space-y-3 mb-10">
+        <img src="/assets/img/logo.png" class="w-14 h-14" />
+        <h1 class="font-bold text-xl">PU</h1>
+    </div>
+
+    <div class="border-b border-gray-700 mb-6"></div>
+
+    <nav class="flex-grow space-y-6 text-lg">
+      <a href="/admin/data_diri/data_diri.html" class="text-gray-300 hover:text-white block">Data Diri</a>
+      <a href="/admin/projects/projects.html" class="text-blue-400 font-semibold block">Projects</a>
+      <a href="/admin/sertif/sertif.html" class="text-gray-300 hover:text-white block">Certificates</a>
+      <a href="/admin/sharing/sharing.html" class="text-gray-300 hover:text-white block">Sharing</a>
+    </nav>
+
+    <a href="/index.html"
+    class="mt-auto bg-[#0ea5e9] text-white px-6 py-3 rounded-lg font-semibold text-center block">
+    LogOut
+    </a>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-1 p-10">
+    <h1 class="text-3xl font-bold mb-6">Tambah Project</h1>
+
+    <div class="bg-[#12222f] p-6 rounded-xl shadow-lg max-w-3xl">
+
+      <form class="space-y-4">
+
+        <!-- FILE -->
+        <div class="flex items-center bg-[#0f1c27] px-4 py-3 rounded-lg">
+          <input type="file" class="text-gray-300" />
+        </div>
+
+        <!-- ROW 1 -->
+        <div class="grid grid-cols-2 gap-4">
+          <input type="text" placeholder="Judul Project"
+            class="bg-[#0f1c27] px-4 py-3 rounded-lg w-full outline-none" />
+
+          <input type="text" placeholder="Durasi (mis. 1 bulan)"
+            class="bg-[#0f1c27] px-4 py-3 rounded-lg w-full outline-none" />
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="grid grid-cols-2 gap-4">
+          <input type="date" class="bg-[#0f1c27] px-4 py-3 rounded-lg w-full outline-none" />
+
+          <input type="text" placeholder="Kolaborasi/tim/mandiri"
+            class="bg-[#0f1c27] px-4 py-3 rounded-lg w-full outline-none" />
+        </div>
+
+        <!-- LINK -->
+        <input type="text" placeholder="Link Project"
+          class="bg-[#0f1c27] px-4 py-3 rounded-lg w-full outline-none" />
+
+        <!-- DESKRIPSI -->
+        <textarea placeholder="Deskripsi project"
+          class="bg-[#0f1c27] px-4 py-3 h-24 rounded-lg w-full outline-none"></textarea>
+
+        <!-- BUTTON -->
+        <button type="submit"
+          class="w-full bg-[#0ea5e9] text-white py-3 rounded-lg font-semibold text-lg">
+          Tambah Project
+        </button>
+
+      </form>
+    </div>
+
+    <div class="bg-[#12222f] p-6 rounded-xl shadow-lg">
+      <table class="w-full border-separate border-spacing-y-3">
+
+        <thead>
+          <tr class="bg-[#0f1c27] text-left">
+            <th class="px-4 py-3 rounded-l-lg">Gambar</th>
+            <th class="px-4 py-3">Judul</th>
+            <th class="px-4 py-3 rounded-r-lg text-center">Aksi</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <!-- ITEM EXAMPLE -->
+          <!-- <tr class="bg-[#0f1c27]">
+            <td class="px-4 py-3">
+              <img src="/assets/img/example-cert.png" class="w-20 rounded-lg">
+            </td>
+            <td class="px-4 py-3">Dicoding Frontend Certificate</td>
+            <td class="px-4 py-3">2023-04-11</td>
+            <td class="px-4 py-3 text-center">
+              <button class="bg-[#0ea5e9] px-4 py-2 rounded-lg mr-2">Edit</button>
+              <button class="bg-red-500 px-4 py-2 rounded-lg">Delete</button>
+            </td>
+          </tr> -->
+
+        </tbody>
+
+      </table>
+    </div>
+
+  </main>
+</body>
+</html>
