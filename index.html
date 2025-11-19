@@ -5,183 +5,593 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portofolio Umam</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    #dynamicText::after {
+      content: "|";
+      margin-left: 4px;
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+
 </head>
 
 <body class="bg-[#0d1b25] text-white">
 
   <!-- NAVBAR -->
   <nav class="flex items-center justify-between px-6 md:px-16 py-4 bg-[#0b1720] border-b border-gray-800">
-    <div class="flex items-center gap-3">
-      <img src="assets/img/logo.png"
-      class="w-8 h-8">
-      <h1 class="font-bold text-xl">Portofolio Umam</h1>
+
+    <div class="flex items-center gap-3 md:w-1/3">
+      <img src="assets/img/logo.png" class="w-8 h-8" />
+      <h1 class="font-bold text-xl">PORTFOLIO UMAM</h1>
     </div>
 
     <ul class="hidden md:flex gap-8 font-semibold">
-      <li><a href="#" class="hover:text-blue-400">Home</a></li>
-      <li><a href="biodata.html" class="hover:text-blue-400">Biodata</a></li>
-      <li><a href="#" class="hover:text-blue-400">Pendidikan</a></li>
-      <li><a href="#" class="hover:text-blue-400">Contact</a></li>
+      <li><a href="/index.html" class="hover:text-blue-400">Home</a></li>
+      <li><a href="/biodata.html" class="hover:text-blue-400">Biodata</a></li>
+      <li><a href="/biodata.html#pendidikan" class="hover:text-blue-400">Pendidikan</a></li>
+      <li><a href="/index.html#contact" class="hover:text-blue-400">Contact</a></li>
     </ul>
   </nav>
 
   <!-- HERO SECTION -->
-  <section class="px-6 md:px-16 py-16 grid md:grid-cols-2 gap-12">
-    <div class="my-auto">
-      <h1 class="text-4xl font-bold mb-4 leading-snug">
+  <section class="px-6 md:px-20 py-20 grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- LEFT -->
+    <div>
+      <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
         Hello, I’m <span class="text-blue-400">Khoirul Umam</span>
       </h1>
 
-      <p class="text-gray-300">
-        Creative <span class="text-blue-400">industrial engineer.</span>
+      <p class="text-gray-300 text-lg">
+        Creative 
+        <span id="dynamicText" class="text-blue-400 font-semibold"></span>
       </p>
 
-      <p class="mt-4 text-gray-400 leading-relaxed">
-        Saya mahasiswa Teknik Industri yang berfokus pada <br>
-        inovasi dan efisiensi proses. Menggabungkan analisis <br>
-        sistem dengan kreativitas untuk menciptakan solusi <br>
-        industri yang efektif dan berkelanjutan. <br>
+
+      <p class="mt-5 text-gray-400 leading-relaxed text-base">
+        Saya mahasiswa Teknik Industri yang berfokus pada inovasi dan efisiensi proses. 
+        Menggabungkan analisis sistem dengan kreativitas untuk menciptakan solusi industri 
+        yang efektif, modern, dan berkelanjutan.
       </p>
 
-      <button class="mt-6 px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg">
+      <button class="mt-8 px-6 py-3 bg-blue-500 hover:bg-blue-600 
+                    text-white font-semibold rounded-xl shadow-lg shadow-blue-500/20
+                    transition-all flex items-center gap-2">
+        <i class="fa-regular fa-paper-plane"></i>
         Get in Touch
       </button>
     </div>
 
+    <!-- RIGHT -->
     <div class="flex justify-center">
       <img src="assets/img/pp.png"
-      class="w-auto h-auto">
+          class="w-[420px] max-w-[75vw] rounded-2xl shadow-xl shadow-blue-500/10" />
     </div>
+
   </section>
+
 
   <!-- ABOUT -->
   <section class="px-6 md:px-16 py-16">
     <h2 class="text-3xl font-bold text-center mb-10">About Me</h2>
 
-    <div class="bg-[#11212e] rounded-2xl p-8 flex flex-col md:flex-row gap-8 border border-gray-800">
-      <img src="assets/img/pp.png"
-           class="w-80 h-80" />
-      <div>
-        <h3 class="font-semibold text-xl mb-3">
+    <div class="bg-[#11212e] border border-gray-800 rounded-2xl p-10 
+                flex flex-col md:flex-row items-center md:items-start gap-10">
+
+      <!-- FOTO PROFIL -->
+      <img src="assets/img/pp.png" 
+          class="w-80 h-80 object-cover rounded-xl shadow-lg" />
+
+      <!-- TEKS -->
+      <div class="text-center md:text-left">
+        <h3 class="font-semibold text-2xl text-white mb-3">
           Hello, I'm <span class="text-blue-400">Khoirul Umam</span>
         </h3>
 
         <p class="text-gray-300 leading-relaxed">
-          Saya adalah seorang mahasiswa Teknik Industri yang <br>
-          memiliki impian besar untuk membangun perusahaan atau <br>
-          bisnis sendiri. Tujuan saya bukan hanya meraih kesuksesan <br>
-          pribadi, tetapi juga menciptakan banyak lapangan pekerjaan <br>
-          agar dapat berkontribusi bagi masyarakat dan membantu <br>
-          lebih banyak orang mencapai masa depan yang lebih baik. <br>
+          Saya adalah seorang mahasiswa Teknik Industri yang memiliki impian besar 
+          untuk membangun perusahaan atau bisnis sendiri. Tujuan saya bukan hanya 
+          meraih kesuksesan pribadi, tetapi juga menciptakan banyak lapangan pekerjaan 
+          agar dapat berkontribusi bagi masyarakat dan membantu lebih banyak orang 
+          mencapai masa depan yang lebih baik.
         </p>
 
-        <div class="flex gap-4 mt-6">
-          <a class="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-white">CV Umam</a>
-          <a class="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-white">Project Umam</a>
+        <!-- BUTTON -->
+        <div class="flex gap-4 mt-20 justify-center md:justify-start">
+          <!-- Tombol CV Umam (FILL) -->
+          <a class="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-white cursor-pointer flex items-center gap-2">
+            <i class="fa-regular fa-id-badge"></i>
+            CV Umam
+          </a>
+
+          <!-- Tombol Project Umam (OUTLINE seperti gambar) -->
+          <a class="px-4 py-2 border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white rounded-lg cursor-pointer flex items-center gap-2">
+            <i class="fa-solid fa-list-check"></i>
+            Project Umam
+          </a>
         </div>
       </div>
+
     </div>
+
 
     <!-- Stats -->
     <div class="grid md:grid-cols-3 gap-6 mt-10">
-      <div class="bg-[#11212e] p-6 rounded-xl text-center border border-gray-800">
-        <h1 class="text-3xl font-bold">3</h1>
-        <p class="text-gray-300">Total Projects</p>
+
+      <!-- CARD 1 -->
+      <div class="bg-[#11212e] p-6 rounded-xl border border-gray-800">
+        <div class="flex items-start justify-between">
+          <div class="text-white text-xl">
+            <!-- <i class="fa-regular fa-code-branch"></i>-->
+             <>
+          </div>
+          <span class="text-3xl font-bold text-blue-500">3</span>
+        </div>
+
+        <h3 class="text-white font-semibold mt-4">TOTAL PROJECTS</h3>
+        <p class="text-gray-400 text-sm">Innovative web solutions crafted</p>
       </div>
-      <div class="bg-[#11212e] p-6 rounded-xl text-center border border-gray-800">
-        <h1 class="text-3xl font-bold">4</h1>
-        <p class="text-gray-300">License</p>
+
+      <!-- CARD 2 -->
+      <div class="bg-[#11212e] p-6 rounded-xl border border-gray-800">
+        <div class="flex items-start justify-between">
+          <div class="text-white text-xl">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <span class="text-3xl font-bold text-blue-500">4</span>
+        </div>
+
+        <h3 class="text-white font-semibold mt-4">LICENSE</h3>
+        <p class="text-gray-400 text-sm">Certified solutions backed by industry standards</p>
       </div>
-      <div class="bg-[#11212e] p-6 rounded-xl text-center border border-gray-800">
-        <h1 class="text-3xl font-bold">3</h1>
-        <p class="text-gray-300">Experience</p>
+
+      <!-- CARD 3 -->
+      <div class="bg-[#11212e] p-6 rounded-xl border border-gray-800">
+        <div class="flex items-start justify-between">
+          <div class="text-white text-xl">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <span class="text-3xl font-bold text-blue-500">3</span>
+        </div>
+
+        <h3 class="text-white font-semibold mt-4">EXPERIENCE</h3>
+        <p class="text-gray-400 text-sm">Proven track record of excellence over the years</p>
       </div>
+
     </div>
+
   </section>
 
   <!-- PORTFOLIO -->
-  <section class="px-6 md:px-16 py-16">
-    <h2 class="text-3xl font-bold text-center">Portfolio Showcase</h2>
-    <p class="text-center text-gray-400 mt-2">
-      Explore projects, certificates, and activities
-    </p>
+<section class="px-6 md:px-16 py-16">
+  <h2 class="text-3xl font-bold text-center">Portfolio Showcase</h2>
+  <p class="text-center text-gray-400 mt-2">
+    Explore projects, certificates, and activities
+  </p>
 
-    <!-- Tabs -->
-    <div class="flex justify-center mt-6 gap-4">
-      <button class="bg-blue-500 px-4 py-2 rounded-lg">Projects</button>
-      <button class="bg-[#11212e] px-4 py-2 rounded-lg border border-gray-700">Certificates</button>
-      <button class="bg-[#11212e] px-4 py-2 rounded-lg border border-gray-700">Sharing</button>
+  <!-- Tabs -->
+  <div class="flex justify-center mt-6 gap-4">
+    <button id="btn-projects" class="tab-btn bg-blue-500 px-4 py-2 rounded-lg">
+      Projects
+    </button>
+    <button id="btn-certificates" class="tab-btn bg-[#11212e] px-4 py-2 rounded-lg border border-gray-700">
+      Certificates
+    </button>
+    <button id="btn-sharing" class="tab-btn bg-[#11212e] px-4 py-2 rounded-lg border border-gray-700">
+      Sharing
+    </button>
+  </div>
+
+  <!-- CONTENT WRAPPER -->
+  <div id="tab-content" class="mt-10">
+
+    <!-- DEFAULT CONTENT (PROJECTS) -->
+    <div id="content-projects" class="grid md:grid-cols-3 gap-6">
+
+      <div class="bg-[#11212e] rounded-xl border border-gray-800 overflow-hidden cursor-pointer">
+        <a href="/projects/projects1.html" class="block">
+          <img src="assets/img/projek1.png" class="w-full" />
+
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <h3 class="font-semibold text-white">Smart Indoor Herb Garden</h3>
+              <p class="text-gray-400 text-sm">Sistem pertanian canggih dalam ruangan</p>
+            </div>
+            <div class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full">
+              <i class="fa-solid fa-arrow-right text-white text-base"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="bg-[#11212e] rounded-xl border border-gray-800 overflow-hidden cursor-pointer">
+        <a href="/projects/projects2.html" class="block">
+          <img src="assets/img/projek2.png" class="w-full" />
+
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <h3 class="font-semibold text-white">WC duduk modern</h3>
+              <p class="text-gray-400 text-sm">Rancangan desain toilet duduk ergonomis</p>
+            </div>
+
+            <!-- Panah dalam lingkaran -->
+            <div class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full">
+              <i class="fa-solid fa-arrow-right text-white text-base"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="bg-[#11212e] rounded-xl border border-gray-800 overflow-hidden cursor-pointer">
+        <a href="/projects/projects3.html" class="block">
+          <img src="assets/img/projek3.png" class="w-full" />
+
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <h3 class="font-semibold text-white">Design Room versi 1</h3>
+              <p class="text-gray-400 text-sm">Desain ruangan keren</p>
+            </div>
+
+            <!-- Panah -->
+            <div class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full">
+              <i class="fa-solid fa-arrow-right text-white text-base"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="bg-[#11212e] rounded-xl border border-gray-800 overflow-hidden cursor-pointer">
+        <a href="/projects/projects4.html" class="block">
+          <img src="assets/img/projek4.png" class="w-full" />
+
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <h3 class="font-semibold text-white">Kulkas Satu Pintu</h3>
+              <p class="text-gray-400 text-sm">Kulkas satu pintu dengan rak banyak dan rapi</p>
+            </div>
+
+            <!-- Panah -->
+            <div class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full">
+              <i class="fa-solid fa-arrow-right text-white text-base"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+
     </div>
 
-    <!-- Project Cards -->
-    <div class="grid md:grid-cols-3 gap-6 mt-10">
-
-      <!-- Card -->
-      <div class="bg-[#11212e] rounded-xl border border-gray-800 overflow-hidden">
-        <img src="https://via.placeholder.com/600x400" class="w-full" />
-        <div class="p-4">
-          <h3 class="font-semibold">Smart Indoor Herb Garden</h3>
-          <p class="text-gray-400 text-sm">Sistem pertanian canggih...</p>
-        </div>
-      </div>
-
-      <div class="bg-[#11212e] rounded-xl border border-gray-800 overflow-hidden">
-        <img src="https://via.placeholder.com/600x400" class="w-full" />
-        <div class="p-4">
-          <h3 class="font-semibold">Toilet Duduk</h3>
-          <p class="text-gray-400 text-sm">Rancangan toilet duduk ergonomis</p>
-        </div>
-      </div>
-
-      <div class="bg-[#11212e] rounded-xl border border-gray-800 overflow-hidden">
-        <img src="https://via.placeholder.com/600x400" class="w-full" />
-        <div class="p-4">
-          <h3 class="font-semibold">Design Room versi 1</h3>
-          <p class="text-gray-400 text-sm">Desain ruangan modern</p>
-        </div>
-      </div>
+    <!-- CERTIFICATES -->
+    <div id="content-certificates" class="hidden grid md:grid-cols-4 gap-6">
+      <img onclick="openPreview(this.src)" src="assets/img/sertif1.png" class="cert-img rounded-xl border border-gray-800 cursor-pointer" />
+      <img onclick="openPreview(this.src)" src="assets/img/sertif2.png" class="cert-img rounded-xl border border-gray-800 cursor-pointer" />
+      <img onclick="openPreview(this.src)" src="assets/img/sertif3.png" class="cert-img rounded-xl border border-gray-800 cursor-pointer" />
+      <img onclick="openPreview(this.src)" src="assets/img/sertif4.png" class="cert-img rounded-xl border border-gray-800 cursor-pointer" />
     </div>
-  </section>
+
+
+    <!-- IMAGE PREVIEW POPUP -->
+    <div id="imagePreviewOverlay"
+        class="hidden fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
+
+      <div class="relative">
+        <span onclick="closePreview()"
+              class="absolute -top-4 -right-4 bg-white text-black w-8 h-8 flex justify-center items-center 
+                    rounded-full cursor-pointer font-bold text-lg shadow-lg">
+          ×
+        </span>
+        <img id="previewImage"
+        class="w-[900px] max-w-[95vw] h-auto rounded-xl shadow-xl border border-gray-600 object-contain">
+      </div>
+
+    </div>
+
+
+
+    <!-- SHARING -->
+    <div id="content-sharing" class="hidden grid md:grid-cols-3 gap-6">
+
+
+      
+
+      <!-- SHARING 1 -->
+      <div class="bg-[#11212e] rounded-xl border border-gray-800 overflow-hidden cursor-pointer">
+        <a href="/sharing/sharing1.html" class="block">
+          <img src="assets/img/sharing1.png" class="w-full" />
+
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <h3 class="font-semibold text-white">Buat akun TikTok</h3>
+              <p class="text-gray-400 text-sm">Tutorial buat akun TikTok di HP</p>
+            </div>
+
+            <!-- Panah -->
+            <div class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full">
+              <i class="fa-solid fa-arrow-right text-white text-base"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <!-- SHARING 2 -->
+      <div class="bg-[#11212e] rounded-xl border border-gray-800 overflow-hidden cursor-pointer">
+        <a href="/sharing/sharing2.html" class="block">
+          <img src="assets/img/sharing2.png" class="w-full" />
+
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <h3 class="font-semibold text-white">Download Laragon</h3>
+              <p class="text-gray-400 text-sm">Tutorial cara download Laragon</p>
+            </div>
+
+            <!-- Panah -->
+            <div class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full">
+              <i class="fa-solid fa-arrow-right text-white text-base"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+      <!-- SHARING 3 -->
+      <div class="bg-[#11212e] rounded-xl border border-gray-800 overflow-hidden cursor-pointer">
+        <a href="/sharing/sharing3.html" class="block">
+          <img src="assets/img/sharing3.png" class="w-full" />
+
+          <div class="p-4 flex items-center justify-between">
+            <div>
+              <h3 class="font-semibold text-white">Buat akun GitHub</h3>
+              <p class="text-gray-400 text-sm">Tutorial cara buat akun GitHub</p>
+            </div>
+
+            <!-- Panah -->
+            <div class="w-9 h-9 flex items-center justify-center bg-white/10 rounded-full">
+              <i class="fa-solid fa-arrow-right text-white text-base"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+
 
   <!-- CONTACT AREA -->
+  <!-- CONTACT AREA -->
+  <div id="contact">
   <section class="px-6 md:px-16 py-16 grid md:grid-cols-2 gap-10">
 
     <!-- LEFT (CONTACT FORM) -->
     <div class="bg-[#11212e] p-8 rounded-xl border border-gray-800">
-      <h3 class="text-xl font-bold mb-4">Get in Touch</h3>
-      <p class="text-gray-400 mb-6">Send me a message</p>
+      <h3 class="text-xl font-bold mb-2">Get In Touch</h3>
+      <p class="text-gray-400 mb-6">Have something to discuss? Send me a message and let's talk.</p>
 
-      <input type="text" class="w-full p-3 rounded bg-[#0b1720] mb-3 border border-gray-700" placeholder="Your Name">
-      <input type="email" class="w-full p-3 rounded bg-[#0b1720] mb-3 border border-gray-700" placeholder="Your Email">
-      <textarea class="w-full p-3 rounded bg-[#0b1720] h-32 border border-gray-700"
+      <input type="text" class="w-full p-3 rounded-lg bg-[#0b1720] mb-3 border border-gray-700 text-gray-200" placeholder="Your Name">
+      <input type="email" class="w-full p-3 rounded-lg bg-[#0b1720] mb-3 border border-gray-700 text-gray-200" placeholder="Your Email">
+      <textarea class="w-full p-3 rounded-lg bg-[#0b1720] h-32 border border-gray-700 text-gray-200"
                 placeholder="Your Message"></textarea>
 
-      <button class="w-full bg-blue-500 mt-4 py-2 rounded-lg font-semibold hover:bg-blue-600">
-        Send Message
+      <button class="w-full bg-blue-500 mt-4 py-3 rounded-lg font-semibold hover:bg-blue-600">
+        Send Massage
       </button>
+
+      <!-- Connect With Me -->
+      <div class="mt-8 bg-[#0b1720] p-4 rounded-xl border border-gray-700">
+        <p class="text-gray-300 font-semibold mb-3">🔗 Connect With Me</p>
+
+        <div class="grid grid-cols-2 gap-3">
+
+          <a class="flex items-center gap-2 bg-[#11212e] border border-gray-700 p-2 rounded-lg">
+            <i class="fa-brands fa-instagram text-pink-400"></i>
+            <span class="text-gray-300">@umamstories</span>
+          </a>
+
+          <a class="flex items-center gap-2 bg-[#11212e] border border-gray-700 p-2 rounded-lg">
+            <i class="fa-brands fa-youtube text-red-500"></i>
+            <span class="text-gray-300">@umamstories</span>
+          </a>
+
+          <a class="flex items-center gap-2 bg-[#11212e] border border-gray-700 p-2 rounded-lg">
+            <i class="fa-brands fa-linkedin text-blue-400"></i>
+            <span class="text-gray-300">@umamstories</span>
+          </a>
+
+          <a class="flex items-center gap-2 bg-[#11212e] border border-gray-700 p-2 rounded-lg">
+            <i class="fa-brands fa-tiktok text-white"></i>
+            <span class="text-gray-300">@umamstories</span>
+          </a>
+
+          <a class="flex items-center gap-2 bg-[#11212e] border border-gray-700 p-2 rounded-lg col-span-2">
+            <i class="fa-brands fa-github text-gray-300"></i>
+            <span class="text-gray-300">@umamstories</span>
+          </a>
+
+        </div>
+      </div>
     </div>
 
     <!-- RIGHT (COMMENTS) -->
     <div class="bg-[#11212e] p-8 rounded-xl border border-gray-800">
       <h3 class="text-xl font-bold mb-4">Comments</h3>
 
+      <label class="text-gray-300 text-sm">Name*</label>
       <input type="text" placeholder="Your Name"
-             class="w-full p-3 rounded bg-[#0b1720] mb-3 border border-gray-700">
+            class="w-full p-3 rounded-lg bg-[#0b1720] mb-4 mt-1 border border-gray-700 text-gray-200">
 
-      <textarea placeholder="Write your comment..."
-                class="w-full p-3 rounded bg-[#0b1720] mb-3 border border-gray-700 h-32"></textarea>
+      <label class="text-gray-300 text-sm">Message*</label>
+      <textarea placeholder="Write your massage here..."
+                class="w-full p-3 rounded-lg bg-[#0b1720] mb-4 mt-1 border border-gray-700 text-gray-200 h-72"></textarea>
 
-      <button class="w-full bg-blue-500 py-2 rounded-lg font-semibold hover:bg-blue-600">
+      <label class="text-gray-300 text-sm">Profile Photo (optional)</label>
+      <input type="file" 
+            class="w-full mt-1 p-2 rounded-lg bg-[#0b1720] border border-gray-700 text-gray-300 mb-1">
+
+      <p class="text-gray-400 text-xs mb-4">Max file size: 5MB</p>
+
+      <button class="w-full bg-blue-500 py-3 rounded-lg font-semibold hover:bg-blue-600">
         Send Comment
       </button>
-    </div>
 
+    </div>
+    
   </section>
+</div>
+
 
   <!-- Footer -->
-  <footer class="py-6 text-center border-t border-gray-800">
-    <p class="text-gray-400">© Khoirul Umam</p>
+  <footer class="py-6 border-t border-gray-800 mt-10">
+
+    <div class="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 gap-4">
+
+      <!-- LEFT: Logo -->
+      <div class="flex items-center gap-3 md:w-1/3">
+        <img src="assets/img/logo.png" class="w-8 h-8" />
+        <h1 class="font-bold text-xl">PU</h1>
+      </div>
+
+      <!-- CENTER: Navigation -->
+      <ul class="flex gap-6 font-semibold text-center md:w-1/3 justify-center">
+        <li><a href="/index.html" class="hover:text-blue-400">Home</a></li>
+        <li><a href="/biodata.html" class="hover:text-blue-400">Biodata</a></li>
+        <li><a href="/biodata.html#pendidikan" class="hover:text-blue-400">Pendidikan</a></li>
+        <li><a href="/index.html#contact" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+
+      <!-- RIGHT: Copyright -->
+      <p class="text-gray-400 text-sm md:w-1/3 text-center md:text-right">
+        © 2025 Khoirul Umam
+      </p>
+
+    </div>
+
   </footer>
+
+
+
+
+
+
+
+
+<!-- animasi di hero -->
+  <script>
+  const words = [
+    "Industrial Engineer.",
+    "Pro Engineering.",
+    "Problem Solver.",
+    "Creative Thinker.",
+    "Process Optimizer."
+  ];
+
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  const element = document.getElementById("dynamicText");
+
+  function typeEffect() {
+    const currentWord = words[wordIndex];
+
+    if (!isDeleting) {
+      // Ketik huruf
+      element.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+
+      // Jika selesai mengetik satu kata
+      if (charIndex === currentWord.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1200); // jeda sebelum hapus
+        return;
+      }
+    } else {
+      // Hapus huruf
+      element.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+
+      // Jika selesai hapus kata
+      if (charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+    }
+
+    // Speed
+    const speed = isDeleting ? 60 : 90;
+    setTimeout(typeEffect, speed);
+  }
+
+  typeEffect();
+</script>
+
+
+  <!-- SCRIPT UNTUK TAB -->
+<script>
+  const btnProjects = document.getElementById("btn-projects");
+  const btnCertificates = document.getElementById("btn-certificates");
+  const btnSharing = document.getElementById("btn-sharing");
+
+  const contentProjects = document.getElementById("content-projects");
+  const contentCertificates = document.getElementById("content-certificates");
+  const contentSharing = document.getElementById("content-sharing");
+
+  function resetTabs() {
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      btn.classList.remove("bg-blue-500");
+      btn.classList.add("bg-[#11212e]", "border", "border-gray-700");
+    });
+
+    contentProjects.classList.add("hidden");
+    contentCertificates.classList.add("hidden");
+    contentSharing.classList.add("hidden");
+  }
+
+  btnProjects.onclick = () => {
+    resetTabs();
+    btnProjects.classList.add("bg-blue-500");
+    contentProjects.classList.remove("hidden");
+  };
+
+  btnCertificates.onclick = () => {
+    resetTabs();
+    btnCertificates.classList.add("bg-blue-500");
+    contentCertificates.classList.remove("hidden");
+  };
+
+  btnSharing.onclick = () => {
+    resetTabs();
+    btnSharing.classList.add("bg-blue-500");
+    contentSharing.classList.remove("hidden");
+  };
+</script>
+
+<script>
+  function openPreview(src) {
+    document.getElementById("previewImage").src = src;
+    document.getElementById("imagePreviewOverlay").classList.remove("hidden");
+  }
+
+  function closePreview() {
+    document.getElementById("imagePreviewOverlay").classList.add("hidden");
+  }
+
+  // Klik area gelap menutup
+  document.getElementById("imagePreviewOverlay").addEventListener("click", function(e) {
+    if (e.target === this) closePreview();
+  });
+</script>
 
 </body>
 </html>

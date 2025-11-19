@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Laragon - Sharing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#0d1b25] text-white">
+
+  <!-- NAVBAR -->
+  <nav class="flex items-center justify-between px-6 md:px-16 py-4 bg-[#0b1720] border-b border-gray-800">
+
+    <div class="flex items-center gap-3 md:w-1/3">
+      <img src="/assets/img/logo.png" class="w-8 h-8" />
+      <h1 class="font-bold text-xl">PORTFOLIO UMAM</h1>
+    </div>
+
+    <ul class="hidden md:flex gap-8 font-semibold">
+      <li><a href="/index.html" class="hover:text-blue-400">Home</a></li>
+      <li><a href="/biodata.html" class="hover:text-blue-400">Biodata</a></li>
+      <li><a href="/biodata.html#pendidikan" class="hover:text-blue-400">Pendidikan</a></li>
+      <li><a href="/index.html#contact" class="hover:text-blue-400">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENT -->
+  <section class="px-6 md:px-16 py-16 max-w-4xl mx-auto">
+
+    <h1 class="text-3xl font-bold mb-6">Download Laragon</h1>
+
+    <div class="flex justify-center mb-8">
+      <img src="/assets/img/sharing2.png" class="rounded-xl border border-gray-700 shadow-lg">
+    </div>
+
+    <div class="bg-[#11212e] p-8 rounded-2xl border border-gray-800 leading-relaxed">
+      <ol class="list-decimal pl-5 space-y-3 text-gray-300">
+
+        <li><b>Buka Website Resmi Laragon</b><br>
+          • Buka browser (Chrome/Edge).<br>
+          • Kunjungi situs resmi: <i>https://laragon.org</i>
+        </li>
+
+        <li><b>Pilih Versi Laragon yang Akan Diunduh</b><br>
+          Biasanya ada dua pilihan:<br>
+          • <b>Laragon Full</b> → sudah ada Apache, MySQL/MariaDB, PHP, Node.js.<br>
+          • <b>Laragon Lite</b> → versi ringan, tanpa Node.js.<br><br>
+          Untuk pemula dan penggunaan PHP/Laravel, pilih <b>Laragon Full</b>.<br>
+          Klik tombol <b>Download</b> pada versi yang kamu pilih.
+        </li>
+
+        <li><b>Tunggu Proses Download</b><br>
+          Ukuran file sekitar <b>130–140 MB</b> (Full), jadi tunggu hingga file <b>.exe</b> selesai terunduh.
+        </li>
+
+        <li><b>Jalankan Installer Laragon</b><br>
+          • Buka folder <b>Downloads</b>.<br>
+          • Klik dua kali file seperti:<br>
+          <i>laragon-wamp.exe</i> atau <i>laragon-full.exe</i>.
+        </li>
+
+        <li><b>Mulai Instalasi</b><br>
+          Ikuti langkah berikut:<br>
+          • Klik <b>Next</b>.<br>
+          • Pilih folder instalasi (boleh default: <b>C:\laragon</b>).<br>
+          • Klik <b>Next</b> lagi.<br><br>
+
+          Centang:<br>
+          ✔ Add Laragon to PATH (opsional tapi disarankan)<br>
+          ✔ Auto start all services (jika ingin Apache/MySQL otomatis berjalan)<br><br>
+
+          Lalu klik <b>Install</b>.
+        </li>
+
+        <li><b>Tunggu Proses Instalasi</b><br>
+          Tunggu hingga instalasi selesai (biasanya &lt;1 menit karena Laragon sangat ringan).
+        </li>
+
+        <li><b>Jalankan Laragon</b><br>
+          Setelah selesai:<br>
+          • Klik <b>Finish</b> atau buka Laragon dari desktop.<br><br>
+
+          Ketika Laragon terbuka:<br>
+          • Tekan <b>Start All</b> untuk menjalankan Apache & MySQL.<br>
+          Jika berjalan normal, status akan berubah menjadi <b>Running</b>.
+        </li>
+
+        <li><b>Cek Laragon Berfungsi</b><br>
+          Buka browser dan ketik:<br>
+          <b>http://localhost</b><br>
+          Jika halaman Laragon muncul, berarti <b>berhasil!</b>
+        </li>
+
+        <li><b>(Opsional) Install Laravel dari Laragon</b><br>
+          Laragon sudah punya fitur otomatis.<br><br>
+
+          Buka Terminal Laragon lalu ketik:<br>
+          <code>composer create-project laravel/laravel nama-proyek</code><br><br>
+
+          Atau cukup klik kanan di folder <b>www</b> → <b>Quick app</b> → <b>Laravel</b> (jika tersedia).
+        </li>
+
+      </ol>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-6 border-t border-gray-800 mt-10">
+
+    <div class="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 gap-4">
+
+      <!-- LEFT: Logo -->
+      <div class="flex items-center gap-3 md:w-1/3">
+        <img src="/assets/img/logo.png" class="w-8 h-8" />
+        <h1 class="font-bold text-xl">PU</h1>
+      </div>
+
+      <!-- CENTER: Navigation -->
+      <ul class="flex gap-6 font-semibold text-center md:w-1/3 justify-center">
+        <li><a href="/index.html" class="hover:text-blue-400">Home</a></li>
+        <li><a href="/biodata.html" class="hover:text-blue-400">Biodata</a></li>
+        <li><a href="/biodata.html#pendidikan" class="hover:text-blue-400">Pendidikan</a></li>
+        <li><a href="/index.html#contact" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+
+      <!-- RIGHT: Copyright -->
+      <p class="text-gray-400 text-sm md:w-1/3 text-center md:text-right">
+        © 2025 Khoirul Umam
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
